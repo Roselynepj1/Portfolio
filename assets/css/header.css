@@ -1,0 +1,173 @@
+.logo-img {
+  width: 24px;
+  height: 24px;
+}
+.logo-left-brace {
+  background: linear-gradient(to bottom right, #4bd5ff, #00c0fd);
+}
+.logo-right-brace {
+  background: linear-gradient(to bottom right, #aa007a, #e70faa);
+}
+.logo-left-brace,
+.logo-right-brace {
+  font-size: 34px;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.logo-link {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.logo-text {
+  font-size: 14px;
+  color: transparent;
+  background: linear-gradient(to right, #00c0fd, #e70faa);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.navbar {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  padding: 1em 16em;
+  width: 100%;
+  gap: 32px;
+  justify-content: flex-end;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4em;
+}
+.nav-menu .nav-link:hover {
+  color: transparent;
+  background: linear-gradient(to right, #00c0fd, #e70faa);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.socials {
+  display: flex;
+  gap: 1em;
+}
+
+.socials a .feather-icon {
+  fill: gray;
+  stroke: gray;
+}
+
+.nav-link {
+  color: #666;
+  font-weight: 400;
+}
+
+.menu-toggle,
+.menu-open-link {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 90px;
+}
+/* Media Screens */
+/* Extra Small Devices (phones) */
+@media (max-width: 575.98px) {
+  /* CSS styles for extra small devices */
+  .navbar {
+    padding: 1em 2em;
+  }
+  .menu-toggle,
+  .menu-open-link {
+    display: block;
+  }
+  .menu-toggle .menu-open {
+    stroke: #666;
+    width: 34px;
+    height: 44px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+  /* .navbar {
+    position: relative;
+  } */
+  .navbar .nav-menu {
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    inset: 0;
+    z-index: 200;
+    background: black;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutFromBottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-in-from-top {
+  animation: slideInFromTop 0.5s ease-out; /* Adjust the duration and easing as needed */
+}
+
+.slide-out-from-bottom {
+  animation: slideOutFromBottom 0.5s ease-out; /* Adjust the duration and easing as needed */
+}
+
+/* Small Devices (tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* CSS styles for small devices */
+  .navbar {
+    padding: 1em 2em;
+  }
+}
+
+/* Medium Devices (laptops, desktops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS styles for medium devices */
+  .navbar {
+    padding: 1em 2em;
+  }
+}
+
+/* Large Devices (larger desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* CSS styles for large devices */
+  .navbar {
+    padding: 1em 2em;
+  }
+}
+
+/* Extra Large Devices (extra-large desktops) */
+@media (min-width: 1200px) {
+  /* CSS styles for extra-large devices */
+}
